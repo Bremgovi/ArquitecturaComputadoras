@@ -502,7 +502,7 @@ label img {
 }
 
 label a {
-    font-family: '8bitoperator JVE Regular', sans-serif;
+    font-family: '8bitoperator JVE Regular', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 8px;
     margin: 1em;
     display: block;
@@ -531,4 +531,14 @@ footer{
     transition: .5s ease-in-out;
     box-shadow: 0 0 0 0 #000, 0 0 0 0 #000;
     cursor: pointer;
+}
+
+.container{
+    font-family: '8bitoperator JVE Regular', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
