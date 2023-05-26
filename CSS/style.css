@@ -87,14 +87,15 @@ h1 {
     padding: 0;
 }
 
-.centerCanvas2 li{
+.centerCanvas2 a{
     color: #ffffff;
+    transition: 1s;
+    text-decoration: none;
 }
 .centerCanvas2 ul li{
     margin:0;
-    transition: 1s;
 }
-.centerCanvas2 li:hover{
+.centerCanvas2 a:hover{
     color: #8b8b8b;
     cursor: pointer;
 }
