@@ -125,28 +125,25 @@ if (window.location.pathname.endsWith("/") || document.getElementById("inicio") 
 }
 
 /************************************** NAVIGATION BAR CODE *********************************/
-const toggleButton = document.getElementsByClassName("toggle-button")[0];
-const toggleButton2 = document.getElementsByClassName("toggle-button")[1];
-const navbarLinks = document.getElementsByClassName("navbar-links")[0];
-const navbarLinks2 = document.getElementsByClassName("navbar-links")[1];
+const mainMenu = document.querySelector(".mainMenu");
+const closeMenu = document.querySelector(".closeMenu");
+const openMenu = document.querySelector(".openMenu");
+const menu_items = document.querySelectorAll("nav .mainMenu li a");
 
-// If toggle button is clicked, assigns 'active' class to the toggleButton and navBarLinks
-toggleButton.addEventListener("click", () => {
-  toggleButton.classList.toggle("active");
-  navbarLinks.classList.toggle("active");
+openMenu.addEventListener("click", show);
+closeMenu.addEventListener("click", close);
+
+// close menu when you click on a menu item
+menu_items.forEach((item) => {
+  item.addEventListener("click", function () {
+    close();
+  });
 });
 
-toggleButton2.addEventListener("click", () => {
-  toggleButton2.classList.toggle("active");
-  navbarLinks2.classList.toggle("active");
-});
-
-//If a link is clicked, the previously assigned 'active' class is removed
-document.querySelectorAll(".navbar-links").forEach((n) =>
-  n.addEventListener("click", () => {
-    toggleButton.classList.remove("active");
-    navbarLinks.classList.remove("active");
-    toggleButton2.classList.remove("active");
-    navbarLinks2.classList.remove("active");
-  })
-);
+function show() {
+  mainMenu.style.display = "flex";
+  mainMenu.style.top = "0";
+}
+function close() {
+  mainMenu.style.top = "-150%";
+}

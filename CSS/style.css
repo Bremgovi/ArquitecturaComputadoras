@@ -335,140 +335,89 @@ strong {
 
 
 /* Estilos básicos de la barra de navegación */
-.navbar {
-    position: relative;
-    width: 100vw;
-    border-radius: 0 0 10px 10px;
+nav {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    background-color: #333;
-    color: #dddddd;
-}
-
-.navbar a{
-    color: #dddddd;
-    text-decoration: none;
-}
-
-.brand-title {
-    font-size: 2rem;
-    margin: .5rem;
-    font-weight: 900;
+  }
+nav .mainMenu {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.brand-title a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.brand-title img, .navbar-links img{
-    width: 30px;
-    margin: 10px;
-}
-
-.navbar-links ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.navbar-links li {
     list-style: none;
-    width: 150px;
-    text-align: center;
-}
-
-.navbar-links li a {
-    font-size: 1.25rem;
-    font-weight: 700;
-    padding: 1rem;
-    display: block;
-    border-radius: 10px;
-}
-
-.navbar-links li a:hover, .brand-title a:hover{
-    background-color: #4c4a54;
-    transition: background-color 0.7s ease;
-}
-
-
-.toggle-button {
-    position: absolute;
-    top: 30px;
-    align-self: flex-end;
-    cursor: pointer;
+  }
+  nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    transition: 0.2s ease;
+  }
+  nav .mainMenu li a:hover {
+    background: rgb(255, 94, 0);
+  }
+  nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #dddddd;
-}
-
-.practicas{
-    width: 80vw;
-}
-
-@media screen and (max-width:768px) {
-    .toggle-button {
-        display: flex;
+    cursor: pointer;
+  }
+  nav .mainMenu .closeMenu,
+  .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+  }
+  .fa-facebook:hover {
+    color: rgb(0, 110, 255);
+  }
+  .fa-twitter:hover {
+    color: rgb(86, 154, 243);
+  }
+  .fa-instagram:hover {
+    color: rgb(255, 0, 191);
+  }
+  .fa-github:hover {
+    color: rgb(255, 123, 0);
+  }
+  nav .logo {
+    margin: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  @media (max-width: 800px) {
+    nav .mainMenu {
+      height: 100vh;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      z-index: 10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgb(0, 0, 0);
+      transition: top 1s ease 0s;
+      display: none;
     }
-
-    .toggle-button.active .bar:nth-child(2) {
-        opacity: 0;
+    nav .mainMenu .closeMenu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
     }
-
-    .toggle-button.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+    nav .openMenu {
+      display: block;
     }
-
-    .toggle-button.active .bar:nth-child(3) {
-        transform: translateY(-10px) rotate(-45deg);
+    nav .mainMenu li a:hover {
+      background: none;
+      color: rgb(255, 123, 0);
     }
-
-    .navbar-links {
-        width: 100%;
-        display: none;
+    .icons i {
+      display: inline-block;
+      padding: 12px;
     }
-
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar-links ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar-links li {
-        margin: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .navbar-links li a {
-        padding: .5rem 1rem;
-    }
-
-    .navbar-links.active {
-        display: flex;
-    }
-    .block {
-        flex-direction: column;
-    }
-}
+  }
+  
