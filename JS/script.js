@@ -125,3 +125,31 @@ if (window.location.pathname.endsWith("/") || document.getElementById("inicio") 
 }
 
 /************************************** NAVIGATION BAR CODE *********************************/
+var links = document.getElementById("links");
+var img = document.getElementById("links-img");
+document.querySelector(".menu").addEventListener("click", () => {
+  if (links.className == "show") {
+    links.classList.remove("show");
+    img.classList.remove("show");
+    setTimeout(function () {
+      links.style.opacity = 0;
+      img.style.opacity = 0;
+    }, 250);
+  } else {
+    links.classList.add("show");
+    img.classList.add("show");
+    setTimeout(function () {
+      links.style.opacity = 1;
+      img.style.opacity = 1;
+    }, 250);
+  }
+});
+
+/* Practiques */
+var pdf2 = document.getElementById("pdf2");
+document.getElementById("pdf1").addEventListener("click", () => {
+  document.getElementById("pdf").setAttribute("src", "../Media/files/Reporte1.pdf");
+});
+pdf2.addEventListener("click", () => {
+  console.log("hola");
+});
