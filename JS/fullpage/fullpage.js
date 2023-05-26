@@ -5366,7 +5366,7 @@
     var waterMark = '\n        <div class="fp-watermark" style="'
       .concat(
         positionStyle,
-        '">\n            <a href="https://alvarotrigo.com/fullPage/" \n                rel="nofollow noopener" \n                target="_blank" \n                style="text-decoration:none; color: #000;">\n                    '
+        '">\n            <a href="https://alvarotrigo.com/fullPage/" \n                rel="nofollow noopener" \n                target="_blank" \n                style="display:none;text-decoration:none; color: #000;">\n                    '
       )
       .concat(getOptions().credits.label || "Made with fullPage.js library", "\n            </a>\n        </div>\n    ");
     var lastSection = getLast(state.sections);
