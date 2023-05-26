@@ -111,16 +111,13 @@ if (window.location.pathname.endsWith("/") || document.getElementById("inicio") 
     },
     retina_detect: true,
   });
+
   //////////////////////// My code ////////////////////////////////////////
   var buttonBegin = document.getElementById("start");
-  var welcomeMessage = document.getElementById("welcome");
-  var linkToIntro = document.getElementById("intro");
+
   buttonBegin.addEventListener("click", function () {
-    welcomeMessage.innerHTML = "¡Bienvenido!";
-    welcomeMessage.classList.add("fade-in-animation");
-    buttonBegin.disabled = true;
-    linkToIntro.style.display = "flex";
-    linkToIntro.classList.add("fade-in-animation");
+    console.log("hola");
+    window.location.href = "./HTML/unidad1.html";
   });
 }
 

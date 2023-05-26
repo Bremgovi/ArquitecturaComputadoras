@@ -5,6 +5,14 @@
 /*********************************/
 /******     GENERALES      ******/
 /*********************************/
+
+@font-face {
+    font-family: "8bitoperator JVE Regular";
+    src: url("8bitoperator_jve.eot?") format("eot"), url("8bitoperator_jve.woff") format("woff"), url("8bitoperator_jve.ttf") format("truetype"), url("8bitoperator_jve.svg#8bitoperator-JVE") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -58,7 +66,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0;
+    gap: 10px;
     /*Positioning*/
     position: absolute;
     top: 51%;
@@ -70,10 +78,14 @@ h1 {
 
 .centerCanvas h1,
 .centerCanvas2 h1 {
-    font-size: 2.75rem;
+    font-family: '8bitoperator JVE Regular', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 10px;
+    font-size: 3rem;
     color: white;
 }
-
+#welcome{
+    font-family: '8bitoperator JVE Regular', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .centerCanvas2 h1 {
     border-bottom: 3px solid white;
 }
@@ -91,17 +103,24 @@ h1 {
 
 .centerCanvas2 a {
     color: #ffffff;
-    transition: 1s;
+    transition: 0.5s ease-in-out;
     text-decoration: none;
 }
 
 .centerCanvas2 ul li {
     margin: 0;
+    width: 100%;
+    text-align: center;
+    transition: 0.5s ease-in-out;
 }
-
+.centerCanvas2 ul li:hover {
+    background-color: rgba(234, 234, 234, 0.1);
+    border-radius: 5px;
+}
 .centerCanvas2 a:hover {
     color: #8b8b8b;
     cursor: pointer;
+    
 }
 
 .centerCanvas p {
@@ -126,7 +145,8 @@ h1 {
 }
 
 .centerCanvas a img {
-    width: 50%;
+    width: 30%;
+    margin-bottom: 50px;
 }
 
 .centerCanvas a img:hover {
@@ -204,6 +224,7 @@ p,
 li {
     text-align: justify;
     margin: 10px;
+    color: #d8d8d8;
 }
 
 ul li,
@@ -213,13 +234,16 @@ ol li,
 }
 
 .index-list {
+    color: #fff;
     font-size: 1.10rem;
     margin-left: 50px;
     margin-top: 20px;
 }
 
+
+
 .subindex-list {
-    color: rgb(69, 69, 69);
+    color: #8b8b8b;
     font-size: 1.05rem;
     margin-left: 75px;
 }
@@ -230,10 +254,12 @@ ol li,
 }
 
 .subtopic {
+    color: #e21c90;
     margin: 100px 0 20px 0;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #e21c90;
 }
-
+/*#e21c90
+#d11d59*/
 .index:not(:first-child) {
     color: #cf0079;
     border-bottom: #cf0079 3px solid;
@@ -280,16 +306,21 @@ ol li,
 .section h1 {
     text-align: center;
     margin: 10px;
-    color: #fff;
+    color: #d11d59;
     font-size: 3.5rem;
     letter-spacing: 2px;
 }
 
 .content {
     padding: 50px;
-    background-color: rgba(183, 183, 183, 0.9);
+   /* background-color: rgba(183, 183, 183, 0.2);*/
+   background-color: rgba(17, 16, 21, 0.8);
     border-radius: 10px;
     margin: 0 auto 5% auto;
+}
+
+.content2{
+    background-color: rgba(17, 16, 21, 0.9);
 }
 
 #section2ID .content {
@@ -301,20 +332,22 @@ ol li,
 }
 
 #section1ID {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Media/img/wallpaper/wallpaper.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url("../Media/img/wallpaper/code.gif");
     justify-content: center;
 }
 
 #section2ID {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Media/img/wallpaper/wallpaper3.gif");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Media/img/wallpaper/city.gif");
     justify-content: center;
 }
 
 #section3ID {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Media/img/wallpaper/wallpaper4.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Media/img/wallpaper/wallpaper10.gif");
     justify-content: center;
 }
-
+#section3ID h1{
+    color: white;
+}
 
 #section1ID p {
     text-align: left;
@@ -330,7 +363,7 @@ ol li,
 }
 
 .description h1 {
-    color: #e21c90;
+    color: #d11d59;
 }
 
 .description p,
@@ -370,7 +403,7 @@ label .hamburger {
     left: 50px;
     width: 30px;
     height: 2px;
-    background: #e769c5;
+    background: #d83b7a;
     display: block;
     -webkit-transform-origin: center;
     transform-origin: center;
@@ -387,7 +420,7 @@ label .hamburger:before {
     display: block;
     width: 100%;
     height: 100%;
-    background: #e769c5;
+    background: #d83b7a;
 }
 
 label .hamburger:before {
@@ -464,12 +497,14 @@ label img {
 }
 
 label a {
+    font-family: '8bitoperator JVE Regular', sans-serif;
+    letter-spacing: 8px;
     margin: 1em;
     display: block;
-    color: #f330c9;
+    color: #d83b7a;
     text-decoration: none;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     border-radius: 10px;
     transition: 0.5s ease-in-out;
 }
