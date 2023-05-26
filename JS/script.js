@@ -125,24 +125,33 @@ if (window.location.pathname.endsWith("/") || document.getElementById("inicio") 
 }
 
 /************************************** NAVIGATION BAR CODE *********************************/
-if (document.getElementById("fullpage") != null) {
-  var links = document.getElementById("links");
-  var img = document.getElementById("links-img");
-  document.querySelector(".menu").addEventListener("click", () => {
-    if (links.className == "show") {
-      links.classList.remove("show");
-      img.classList.remove("show");
-      setTimeout(function () {
-        links.style.opacity = 0;
-        img.style.opacity = 0;
-      }, 250);
-    } else {
-      links.classList.add("show");
-      img.classList.add("show");
-      setTimeout(function () {
-        links.style.opacity = 1;
-        img.style.opacity = 1;
-      }, 250);
-    }
-  });
-}
+var links = document.getElementById("links");
+var img = document.getElementById("links-img");
+var img2 = document.getElementById("links-img2");
+var checkbox = document.getElementById("myCheckbox");
+checkbox.disabled = true;
+document.querySelector(".menu").addEventListener("click", () => {
+  if (links.className == "show") {
+    checkbox.checked = false;
+    links.classList.remove("show");
+    img.classList.remove("show");
+    img2.classList.remove("show");
+
+    setTimeout(function () {
+      links.style.opacity = 0;
+      img.style.opacity = 0;
+      img2.style.opacity = 0;
+    }, 250);
+  } else {
+    checkbox.checked = true;
+    links.classList.add("show");
+    img.classList.add("show");
+    img2.classList.add("show");
+
+    setTimeout(function () {
+      links.style.opacity = 1;
+      img.style.opacity = 1;
+      img2.style.opacity = 1;
+    }, 250);
+  }
+});
