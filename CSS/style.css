@@ -522,7 +522,7 @@ label a:hover {
 footer{
     font-size: 1.15rem;
     position: absolute;
-    top: 95%;
+    top: 90%;
     z-index: 100;
     width: 100vw;
     height: 200px;
@@ -531,6 +531,13 @@ footer{
     transition: .5s ease-in-out;
     box-shadow: 0 0 0 0 #000, 0 0 0 0 #000;
     cursor: pointer;
+}
+footer a{
+    color: white;
+    padding: 10px;
+}
+footer a:hover{
+    color: #cf0079;
 }
 
 .container{
@@ -542,3 +549,4 @@ footer{
     align-items: center;
     justify-content: center;
 }
+
