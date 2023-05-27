@@ -522,10 +522,10 @@ label a:hover {
 footer{
     font-size: 1.15rem;
     position: absolute;
-    top: 90%;
-    z-index: 100;
+    top:0;
+    z-index: 50;
     width: 100vw;
-    height: 200px;
+    height: 80px;
     background: #000;
     -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
